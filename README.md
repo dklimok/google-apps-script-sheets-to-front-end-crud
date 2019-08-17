@@ -31,3 +31,7 @@ most of scripts starts from these rows to get config values
       config= initConfig()
     }
  }
+
+# Log(data, [destination])
+just put whatever you want to log here and get it as row added with timestamp in the destination ("web log" by default)
+it's recommended to make new file for log destination if there will be 10K+ log rows to keep GAPI file small and fast.
