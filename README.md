@@ -25,12 +25,13 @@ c. "console" - sometimes results and error detaila need to be printed somewhere.
 # Common scripts
 # initConfig()
 most of scripts starts from these rows to get config values
-
+```
   function doIt(config){  
     if(config===undefined){
       config= initConfig()
     }
  }
+ ```
 
 # Log(data, [destination])
 just put whatever you want to log here and get it as row added with timestamp in the destination ("web log" by default)
