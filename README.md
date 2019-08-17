@@ -22,4 +22,12 @@ b. "web log" - to debug and log web requests and responses i log them here
 
 c. "console" - sometimes results and error detaila need to be printed somewhere.
 
+# Common scripts
+# initConfig()
+most of scripts starts from these rows to get config values
 
+  function doIt(config){  
+    if(config===undefined){
+      config= initConfig()
+    }
+ }
