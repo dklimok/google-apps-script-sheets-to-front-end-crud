@@ -17,7 +17,9 @@ https://docs.google.com/spreadsheets/d/1toEbphpNpyR8v6mXPvZFpQ6cNyCpSR8YGydC7iOQ
 
 # GAPI file sheets
 a. "config" - it's good idea to keep as much as you can out from script. that makes changes faster and makes script reusable.
+
 b. "web log" - to debug and log web requests and responses i log them here
+
 c. "console" - sometimes results and error detaila need to be printed somewhere.
 
 
