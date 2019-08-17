@@ -35,3 +35,10 @@ most of scripts starts from these rows to get config values
 # Log(data, [destination])
 just put whatever you want to log here and get it as row added with timestamp in the destination ("web log" by default)
 it's recommended to make new file for log destination if there will be 10K+ log rows to keep GAPI file small and fast.
+
+# web.js
+have files that get GET POST requests, route them to handler, prepare and return responses.
+
+# Drive()
+class that handles sheets access operations and returns responses with structureda data or handled and documented errors.
+
