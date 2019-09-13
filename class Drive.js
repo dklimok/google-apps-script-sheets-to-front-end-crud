@@ -91,7 +91,20 @@ function Drive(config) {
     }      
   }
   
-  
+    var getDaFromWsHere = function(wsName){
+    var ss = SpreadsheetApp.getActive()
+    var wsResp = getWsByName(ss,wsName)
+    if(wsResp.status!="OK"){return wsResp}
+    try{
+      return{
+        status:"OK",
+        da:wsResp.ws.getDataRange().getValues()
+      }
+    }catch(e){
+      Errors().set("errow on da get with sheet named "+ wsName, e)
+    }      
+  }
+    
   var getDaFromWsInSsParsed = function(ssId,wsName,colmap,mode){
     
     var modes = {
@@ -246,7 +259,8 @@ function Drive(config) {
     getWsInSs:getWsInSs,
     getDaFromWsInSs:getDaFromWsInSs,
     getDaFromWsInSsParsed:getDaFromWsInSsParsed,
-    getDaFromWsInSsParsedAndFiltered:getDaFromWsInSsParsedAndFiltered
+    getDaFromWsInSsParsedAndFiltered:getDaFromWsInSsParsedAndFiltered,
+    getDaFromWsHere:getDaFromWsHere
   }
 
 }  
